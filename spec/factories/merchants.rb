@@ -3,7 +3,7 @@ FactoryBot.define do
     name { "MyString" }
     description { "MyString" }
     email { "MyString" }
-    status { "MyString" }
+    status { "active" }
     total_transaction_sum { "MyString" }
   end
 end

@@ -8,7 +8,7 @@ class Merchants::Update < Mutations::Command
   optional do
     string  :name
     string  :description
-    integer :status
+    string  :status
   end
 
   # The execute method is called only if the inputs validate. It does your business action.

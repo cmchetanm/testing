@@ -8,7 +8,7 @@ class Merchants::Create < Mutations::Command
   # These inputs are optional
   optional do
     string  :description
-    integer :status
+    string  :status
   end
 
   # The execute method is called only if the inputs validate. It does your business action.

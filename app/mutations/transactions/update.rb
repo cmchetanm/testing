@@ -7,7 +7,7 @@ class Transactions::Update < Mutations::Command
   # These inputs are optional
   optional do
     string :amount
-    integer :status
+    string :status
   end
 
   # The execute method is called only if the inputs validate. It does your business action.

@@ -1,38 +1,29 @@
 require "rails_helper"
 
-RSpec.describe TransactionsController, type: :routing do
+RSpec.describe Api::V1::MerchantsController, type: :routing do
   describe "routing" do
     it "routes to #index" do
-      expect(:get => "/transactions").to route_to("transactions#index")
-    end
-
-    it "routes to #new" do
-      expect(:get => "/transactions/new").to route_to("transactions#new")
+      expect(:get => "/api/v1/merchants/1/transactions").to route_to({"format"=>"json", "controller"=>"api/v1/transactions", "action"=>"index", "merchant_id"=>"1"})
     end
 
     it "routes to #show" do
-      expect(:get => "/transactions/1").to route_to("transactions#show", :id => "1")
+      expect(:get => "/api/v1/merchants/1/transactions/1").to route_to({"format"=>"json", "controller"=>"api/v1/transactions", "action"=>"show", "merchant_id"=>"1", "id"=>"1"})
     end
-
-    it "routes to #edit" do
-      expect(:get => "/transactions/1/edit").to route_to("transactions#edit", :id => "1")
-    end
-
 
     it "routes to #create" do
-      expect(:post => "/transactions").to route_to("transactions#create")
+      expect(:post => "/api/v1/merchants/1/transactions").to route_to({"format"=>"json", "controller"=>"api/v1/transactions", "action"=>"create", "merchant_id"=>"1"})
     end
 
     it "routes to #update via PUT" do
-      expect(:put => "/transactions/1").to route_to("transactions#update", :id => "1")
+      expect(:put => "/api/v1/merchants/1/transactions/1").to route_to({"format"=>"json", "controller"=>"api/v1/transactions", "action"=>"update", "merchant_id"=>"1", "id"=>"1"})
     end
 
     it "routes to #update via PATCH" do
-      expect(:patch => "/transactions/1").to route_to("transactions#update", :id => "1")
+      expect(:patch => "/api/v1/merchants/1/transactions/1").to route_to({"format"=>"json", "controller"=>"api/v1/transactions", "action"=>"update", "merchant_id"=>"1", "id"=>"1"})
     end
 
     it "routes to #destroy" do
-      expect(:delete => "/transactions/1").to route_to("transactions#destroy", :id => "1")
+      expect(:delete => "/api/v1/merchants/1/transactions/1").to route_to({"format"=>"json", "controller"=>"api/v1/transactions", "action"=>"destroy", "merchant_id"=>"1", "id"=>"1"})
     end
   end
 end

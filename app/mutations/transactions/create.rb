@@ -6,7 +6,7 @@ class Transactions::Create < Mutations::Command
   end
 
   optional do
-    integer :status
+    string :status
   end
 
   # The execute method is called only if the inputs validate. It does your business action.
